@@ -1,0 +1,112 @@
+/* Экраны */
+$mobileS: 360px
+$mobileM: 414px
+$mobileL: 568px
+$tabletS: 768px
+$tabletM: 1024px
+$desktopS: 1440px
+$desktopM: 1600px
+$desktopL: 1920px
+
+/* Цвета */
+$black: rgba(0, 0, 0, 1)
+$black-opacity: rgba(0, 0, 0, 0.6)
+$shadow: rgba(0, 0, 0, 0.25)
+$white: rgba(255, 255, 255, 1)
+$blue-grey: rgba(145, 156, 183, 1)
+$dark-grey: rgba(196, 196, 196, 1)
+$light-grey: rgba(245, 245, 245, 1)
+$brown: rgba(90, 66, 66, 1)
+$button-gradient: linear-gradient(92.13deg, #FF005B 3.94%, #FF7245 50%, #FFE53B 100%)
+$button-hover-gradient: linear-gradient(92.13deg, #FF005B 3.94%, #FF7245 81.03%, #FFE53B 100%)
+$header-gradient: linear-gradient(180deg, rgba(247, 247, 247, 0) 0%, rgba(255, 101, 101, 0.1) 22.16%, rgba(255, 101, 101, 0.1) 100%)
+
+@font-face
+    font-family: "President Normal"
+    src: url("../fonts/president-normal/president-normal.woff") format("woff"),
+    url("../fonts/president-normal/president-normal.woff2") format("woff2")
+    //url("../fonts/president-normal/president-normal.ttf") format("truetype"),
+    //url("../fonts/president-normal/president-normal.eot?#iefix") format("embedded-opentype"),
+    //url("../fonts/president-normal/president-normal.otf") format("opentype"),
+    //url("../fonts/president-normal/president-normal.svg") format("svg"),
+    font-weight: normal
+    font-style: normal
+
+body
+    font-family: Comfortaa, serif
+    margin: 0
+
+.container
+    width: 1200px
+    margin: 0 auto
+    @media screen and (max-width: $tabletM)
+        width: 90vw
+    @media screen and (max-width: $mobileL)
+        width: 100vw
+
+div
+    box-sizing: border-box
+
+h1, h2
+    font-family: 'President Normal', sans-serif
+    font-weight: 400
+    margin: 0
+
+h1
+    margin-bottom: 20px
+    font-size: 70px
+    line-height: 74px
+
+h2
+    margin-bottom: 5px
+    font-size: 40px
+    line-height: 42px
+    text-align: center
+    @media screen and (max-width: $mobileL)
+        font-size: 24px
+        line-height: 25px
+
+    & + .title__line
+        border-top: 2px solid $black-opacity
+
+h3, h4, h5, h6
+    font-family: Comfortaa, serif
+    font-weight: 700
+    margin: 0
+
+h3
+    font-size: 24px
+    line-height: 27px
+    letter-spacing: 0.1em
+    margin-bottom: 8px
+    @media screen and (max-width: $mobileL)
+        font-size: 16px
+        line-height: 18px
+
+h4
+    font-size: 16px
+    line-height: 18px
+    @media screen and (max-width: $tabletS)
+        font-size: 14px
+        line-height: 16px
+
+button, .btn
+    font-family: Comfortaa, serif
+    color: $white
+    border: none
+    border-radius: 40px
+    background: $button-gradient
+
+    &:hover
+        cursor: pointer
+
+p
+    margin: 0
+
+a
+    color: $black
+    text-decoration: none
+
+    &:hover
+        text-decoration: underline
+        cursor: pointer

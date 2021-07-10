@@ -1,0 +1,82 @@
+@import base.sass
+
+.benefits
+    padding-top: 25px
+    padding-bottom: 47px
+    background: $light-grey
+    @media screen and (max-width: $tabletS)
+        padding: 50px 0
+
+
+    &__title
+        margin-bottom: 69px
+        @media screen and (max-width: $mobileL)
+            margin-bottom: 20px
+
+        & .title__line
+            width: 336px
+            margin: 0 auto
+            @media screen and (max-width: $mobileL)
+                width: 180px
+
+    &__content
+        display: grid
+        grid-template-columns: 1fr 1fr
+        row-gap: 50px
+        column-gap: 190px
+        @media screen and (max-width: $tabletM)
+            column-gap: 100px
+        @media screen and (max-width: $tabletS)
+            grid-template-columns: 1fr
+            column-gap: 0
+            row-gap: 0
+            align-items: center
+
+    &__single
+        display: flex
+        justify-content: center
+
+    &__line
+        display: none
+        @media screen and (max-width: $tabletS)
+            display: block
+            margin: -15px auto 30px
+            width: 182px
+            height: 1px
+
+    &__number
+        width: 101px
+        height: 101px
+        margin-right: 16px
+        background-image: url("../img/triagle.svg")
+        background-size: contain
+        background-repeat: no-repeat
+        @media screen and (max-width: $mobileL)
+            width: 69px
+            height: 69px
+            font-size: 40px
+            line-height: 47px
+
+        & > span
+            display: block
+            width: 100%
+            padding-top: 16px
+            font-family: Roboto, sans-serif
+            font-size: 50px
+            line-height: 59px
+            font-weight: 900
+            text-align: right
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            @media screen and (max-width: $mobileL)
+                padding-top: 10px
+                font-size: 40px
+                line-height: 47px
+
+    &__text
+        & > p
+            max-width: 212px
+            letter-spacing: 0.1em
+            @media screen and (max-width: $mobileL)
+                font-size: 12px
+                line-height: 13px
+                max-width: 188px

@@ -1,0 +1,95 @@
+@import "base"
+
+.services
+    padding: 50px 0
+    background-color: $light-grey
+
+    & > .container
+        padding: 0 50px
+
+    &__title
+        margin-bottom: 20px
+
+        & .title__line
+            width: 140px
+            margin: 0 auto
+
+    &__content
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        @media screen and (max-width: $tabletS)
+            flex-direction: column
+            align-items: center
+
+    &__card
+        position: relative
+        width: 294px
+        height: 456px
+        padding: 17px 23px
+        margin-bottom: 20px
+        background-color: $white
+        box-shadow: 0 4px 4px $shadow
+        @media screen and (max-width: $tabletS)
+            height: 232px
+
+
+        .card
+            &__title
+                margin-bottom: 22px
+                @media screen and (max-width: $tabletS)
+                    margin-bottom: 5px
+
+                h4
+                    text-align: center
+                    margin-bottom: 13px
+                    @media screen and (max-width: $tabletS)
+                        margin-bottom: 7px
+
+                & .title__line
+                    border-top: 2px solid $black
+                    width: 48px
+                    margin: 0 auto
+
+            &__content
+                font-size: 12px
+                line-height: 13px
+                @media screen and (max-width: $tabletS)
+                    font-size: 10px
+                    line-height: 12px
+
+                & ul
+                    padding-inline-start: 0
+                    list-style-position: inside
+
+                    & li
+                        margin-bottom: 10px
+                        @media screen and (max-width: $tabletS)
+                            margin-bottom: 5px
+
+            &__cost
+                position: absolute
+                width: fit-content
+                margin: 0 auto
+                bottom: 78px
+                left: 25%
+                font-size: 24px
+                line-height: 26px
+                @media screen and (max-width: $tabletS)
+                    font-size: 20px
+                    line-height: 24px
+                    left: 30%
+                    bottom: 65px
+
+                & > b
+                    font-family: Montserrat
+
+                & > span
+                    font-size: 20px
+                    font-weight: 700
+
+        & .btn
+            position: absolute
+            bottom: 23px
+            left: 25%
+            padding: 10px 40px

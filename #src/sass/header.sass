@@ -1,0 +1,46 @@
+@import "base"
+
+.header
+    margin: 24px
+    padding: 10px 0 320px
+    background-image: url("../img/full-header.webp")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    @media screen and (max-width: $tabletM)
+        margin: 0
+
+    &-top
+        display: flex
+        justify-content: space-between
+
+        & .menu
+            width: 60%
+
+            ul
+                list-style: none
+                display: flex
+                justify-content: space-between
+                font-weight: 700
+
+    &__logo
+        margin-top: -15px
+        margin-left: -30px
+
+    &__main
+        margin-top: 200px
+
+        & > .btn
+            padding: 20px 40px
+            font-size: 20px
+            line-height: 22px
+
+    &__subtitle
+        max-width: 460px
+        margin-bottom: 18px
+        font-weight: 700
+        font-size: 30px
+        line-height: 33px
+        color: $white
+
+
