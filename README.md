@@ -1,5 +1,5 @@
-# autosender
-frontend сайта autosender
+# DAO-development
+frontend сайта dao
 
 ## Стек технологий
 gulp + sass + ...
