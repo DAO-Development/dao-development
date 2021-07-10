@@ -1,12 +1,18 @@
 $(document).ready(function () {
-    // if ($(window).width() <= '768') {
-    $('.works__slider').slick({
-        variableWidth: false,
-        dots: true,
-        infinite: false,
-        slidesToShow: 3,
-    });
-    // }
+    if ($(window).width() <= '768') {
+        $('.works__slider').slick({
+            slidesToShow: 1,
+            centerMode: true,
+            centerPadding: '91px'
+        });
+    } else {
+        $('.works__slider').slick({
+            variableWidth: false,
+            dots: true,
+            infinite: false,
+            slidesToShow: 3,
+        });
+    }
 
     if ($(window).width() <= '568') {
         $('.reviews__slider').slick({
