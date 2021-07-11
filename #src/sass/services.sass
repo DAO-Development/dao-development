@@ -24,14 +24,15 @@
 
     &__card
         position: relative
-        width: 294px
+        max-width: 294px
         height: 456px
         padding: 17px 23px
         margin-bottom: 20px
         background-color: $white
         box-shadow: 0 4px 4px $shadow
         @media screen and (max-width: $tabletS)
-            height: 232px
+            height: fit-content
+            padding: 17px 23px 100px
 
 
         .card
@@ -78,7 +79,7 @@
                 @media screen and (max-width: $tabletS)
                     font-size: 20px
                     line-height: 24px
-                    left: 30%
+                    left: 29%
                     bottom: 65px
 
                 & > b
@@ -91,5 +92,5 @@
         & .btn
             position: absolute
             bottom: 23px
-            left: 25%
+            left: 24%
             padding: 10px 40px

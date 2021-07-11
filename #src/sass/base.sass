@@ -17,7 +17,7 @@ $blue-grey: rgba(145, 156, 183, 1)
 $dark-grey: rgba(196, 196, 196, 1)
 $light-grey: rgba(245, 245, 245, 1)
 $brown: rgba(90, 66, 66, 1)
-$button-gradient: linear-gradient(92.13deg, #FF005B 3.94%, #FF7245 50%, #FFE53B 100%)
+$button-gradient: linear-gradient(92.13deg, #FF005B 3.94%, #FF7245 30%, #FFE53B 100%)
 $button-hover-gradient: linear-gradient(92.13deg, #FF005B 3.94%, #FF7245 81.03%, #FFE53B 100%)
 $header-gradient: linear-gradient(180deg, rgba(247, 247, 247, 0) 0%, rgba(255, 101, 101, 0.1) 22.16%, rgba(255, 101, 101, 0.1) 100%)
 
@@ -95,10 +95,13 @@ button, .btn
     color: $white
     border: none
     border-radius: 40px
-    background: $button-gradient
+    background-image: $button-gradient
+    background-size: 100% 100%
+    transition: background-size 0.4s
 
     &:hover
         cursor: pointer
+        background-size: 300% 100%
 
 p
     margin: 0
