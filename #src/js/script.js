@@ -1,14 +1,57 @@
 $(document).ready(function () {
+
+    /**
+     *  Фиксация header
+     */
+    window.onscroll = function () {
+        myFunction()
+    };
+    var header = document.getElementById("header-top");
+    if (window.screen.width <= '768')
+        header = document.getElementById("header");
+    var sticky = 10;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            header.classList.add("fixed");
+        } else {
+            header.classList.remove("fixed");
+        }
+    }
+
+    /**
+     * Меню на мобильных
+     */
+    if ($(window).width() <= '768') {
+        $('.header__menu').addClass('sidenav')
+    }
+    $('.header__mobile').on('click', function () {
+        if ($(this).hasClass('change')) {
+            $('.header__mobile').removeClass('change')
+            $('.header__menu').removeClass('width')
+        } else {
+            $('.header__mobile').addClass('change')
+            $('.header__menu').addClass('width')
+        }
+    })
+
+    /**
+     * Определение слайдеров
+     */
     if ($(window).width() <= '768') {
         $('.works__slider').slick({
+            variableWidth: true,
             slidesToShow: 1,
+            arrows: false,
+            dots: true,
             centerMode: true,
-            centerPadding: '91px'
+            centerPadding: '40px'
         });
-    } else {
+    } else if ($(window).width() > '768') {
         $('.works__slider').slick({
             variableWidth: false,
             dots: true,
+            arrows: false,
             infinite: false,
             slidesToShow: 3,
         });

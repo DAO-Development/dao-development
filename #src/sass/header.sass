@@ -9,19 +9,74 @@
     background-position: center
     @media screen and (max-width: $tabletM)
         margin: 0
+        padding: 10px 0 100px
+        background-position: top
+    @media screen and (max-width: $tabletS)
+        background-image: none
+        background-color: $blue-grey
+        padding: 10px 0
+
+    &.fixed
+        z-index: 500
+        position: fixed
+        width: 100vw
+        background-color: $blue-grey
 
     &-top
-        display: flex
-        justify-content: space-between
+        & .container
+            display: flex
+            justify-content: space-between
+            align-items: center
+            @media screen and (max-width: $tabletS)
+                padding: 0 21px
+
+        &.fixed
+            z-index: 500
+            position: fixed
+            top: 0
+            width: 100vw
+            background-color: $blue-grey
 
         & .menu
             width: 60%
+            @media screen and (max-width: $tabletS)
+                display: none
 
             ul
                 list-style: none
                 display: flex
                 justify-content: space-between
+                align-items: center
                 font-weight: 700
+
+            &__social
+                justify-content: space-between
+                padding-inline-start: 0
+                padding: 0 15px
+
+            &.sidenav
+                display: block
+                position: fixed
+                z-index: 1000
+                top: 100px
+                right: 0
+                height: 100%
+                width: 0
+                background-color: $blue-grey
+                overflow-x: hidden
+                transition: 0.5s ease
+
+                & > ul
+                    flex-direction: column
+                    align-items: flex-end
+                    margin-right: 30px
+
+                    & > li
+                        margin-bottom: 10px
+
+                &.width
+                    width: 100vw
+
 
     &__logo
         margin-top: -15px
@@ -29,8 +84,12 @@
 
     &__main
         margin-top: 200px
+        @media screen and (max-width: $tabletM)
+            margin-top: 50px
+        @media screen and (max-width: $tabletS)
+            display: none
 
-        & > .btn
+        & .btn
             padding: 20px 40px
             font-size: 20px
             line-height: 22px
@@ -43,4 +102,29 @@
         line-height: 33px
         color: $white
 
+    &__mobile
+        display: none
+        @media screen and (max-width: $tabletS)
+            display: flex
+            flex-direction: column
 
+        &:hover
+            cursor: pointer
+
+        & .bar
+            width: 35px
+            height: 5px
+            background-color: $black
+            margin: 3px 0
+            transition: 0.4s
+
+        &.change
+            .bar
+                &:first-child
+                    transform: rotate(-45deg) translate(-9px, 6px)
+
+                &:nth-child(2)
+                    opacity: 0
+
+                &:nth-child(3)
+                    transform: rotate(45deg) translate(-8px, -8px)
