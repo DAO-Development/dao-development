@@ -7,9 +7,11 @@ $(document).ready(function () {
         myFunction()
     };
     var header = document.getElementById("header-top");
-    if (window.screen.width <= '768')
-        header = document.getElementById("header");
     var sticky = 10;
+    if (window.screen.width <= '768') {
+        header = document.getElementById("header");
+        sticky = 0
+    }
 
     function myFunction() {
         if (window.pageYOffset >= sticky) {

@@ -13,7 +13,7 @@
     @media screen and (max-width: $tabletS)
         background-image: none
         background-color: $blue-grey
-        padding: 10px 0
+        padding: 0
 
     &.fixed
         z-index: 500
@@ -22,6 +22,14 @@
         background-color: $blue-grey
 
     &-top
+        position: absolute
+        background-color: rgba(0, 0, 0, 0)
+        transition: 0.3s ease
+        width: 100%
+        @media screen and (max-width: $tabletS)
+            padding-top: 10px
+            background-color: $blue-grey
+
         & .container
             display: flex
             justify-content: space-between
@@ -33,7 +41,8 @@
             z-index: 500
             position: fixed
             top: 0
-            width: 100vw
+            left: 0
+            width: 100%
             background-color: $blue-grey
 
         & .menu
@@ -87,7 +96,7 @@
         margin-left: -30px
 
     &__main
-        margin-top: 200px
+        margin-top: 300px
         @media screen and (max-width: $tabletM)
             margin-top: 50px
         @media screen and (max-width: $tabletS)
