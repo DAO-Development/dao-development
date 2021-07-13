@@ -1,0 +1,83 @@
+@import "base"
+
+.pop-up
+    &__title
+        & .title__line
+            width: 290px
+            margin: 0 auto
+            @media screen and (max-width: $tabletS)
+                width: 190px
+
+    &__card
+        display: none
+        opacity: 0
+        transition: 0.3s ease
+
+        &.active
+            display: block
+            opacity: 1
+
+        z-index: 1000
+        width: 1200px
+        height: 700px
+        padding: 30px
+        background-color: white
+        box-shadow: 0 10px 20px $black-opacity
+        border-radius: 20px
+        left: 26vw
+        top: 255px
+        @media screen and (max-width: $tabletM)
+            width: 89vw
+            max-height: 534px
+            padding: 24px
+            top: 80px
+            left: 5.5vw
+        @media screen and (max-width: $tabletS)
+            width: 85vw
+            max-height: 633px
+            left: 7.5vw
+            top: 125px
+        @media screen and (max-width: $mobileL)
+            max-height: 80vh
+            overflow-y: scroll
+        @media screen and (max-width: $mobileM)
+            padding: 16px
+
+    &__close-btn
+        z-index: 1100
+        display: flex
+        justify-content: flex-end
+
+        & svg
+            display: block
+
+        @media screen and (max-width: $mobileM)
+            & svg
+                width: 18px
+                height: 18px
+
+    &__form
+
+        & .btn
+            padding: 20px 40px
+            font-size: 20px
+            line-height: 22px
+            @media screen and (max-width: $tabletS)
+                padding: 10px 20px
+                font-size: 16px
+                line-height: 18px
+
+    &__wall
+        z-index: 700
+        width: 100vw
+        height: 100vh
+        position: fixed
+        top: 0
+        left: 0
+        background-color: $black-opacity
+
+        display: none
+
+        &.active
+            display: grid
+            place-items: center

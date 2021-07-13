@@ -37,6 +37,11 @@ $(document).ready(function () {
         }
     })
 
+    $('.menu__link').on('click', function(){
+        $('.header__mobile').removeClass('change')
+        $('.header__menu').removeClass('width')
+    })
+
     /**
      * Определение слайдеров
      */
@@ -80,4 +85,17 @@ $(document).ready(function () {
             slidesToShow: 2,
         });
     }
+
+    /**
+     * Форма для заявки
+     */
+    $('.btn').on("click", function () {
+        $('.pop-up__card').addClass('active')
+        $('.pop-up__wall').addClass('active')
+    })
+
+    $('.pop-up__close-btn').on("click", function () {
+        $('.pop-up__card').removeClass('active')
+        $('.pop-up__wall').removeClass('active')
+    })
 })
