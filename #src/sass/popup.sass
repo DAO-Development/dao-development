@@ -12,11 +12,6 @@
         display: none
         opacity: 0
         transition: 0.3s ease
-
-        &.active
-            display: block
-            opacity: 1
-
         z-index: 1000
         width: 1200px
         height: 700px
@@ -43,6 +38,14 @@
         @media screen and (max-width: $mobileM)
             padding: 16px
 
+
+        &.active
+            display: block
+            opacity: 1
+
+    &__content
+        padding: 0 20px
+
     &__close-btn
         z-index: 1100
         display: flex
@@ -57,6 +60,15 @@
                 height: 18px
 
     &__form
+
+        input[type=text],
+        input[type=tel],
+        textarea
+            border-radius: 3px
+            border: 1px solid #ccc
+            padding: 5px
+            box-sizing: border-box
+            width: 100%
 
         & .btn
             padding: 20px 40px
@@ -81,3 +93,8 @@
         &.active
             display: grid
             place-items: center
+
+.wpcf7-form-control-wrap
+    margin-top: 5px
+    margin-bottom: 15px
+    display: block

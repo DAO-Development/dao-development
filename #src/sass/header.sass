@@ -23,7 +23,7 @@
 
     &-top
         position: absolute
-        background-color: rgba(0, 0, 0, 0)
+        background: rgba(0, 0, 0, 0)
         transition: 0.3s ease
         width: 100%
         @media screen and (max-width: $tabletS)
@@ -66,7 +66,7 @@
                 display: block
                 position: fixed
                 z-index: 1000
-                top: 100px
+                top: 93px
                 right: 0
                 height: 100%
                 width: 0
@@ -90,10 +90,13 @@
                 &.width
                     width: 100vw
 
-
     &__logo
-        margin-top: -15px
-        margin-left: -30px
+        img
+            width: 80px
+            height: auto
+            @media screen and (max-width: $tabletS)
+                width: 50px
+
 
     &__main
         margin-top: 300px
