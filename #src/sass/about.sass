@@ -1,52 +1,65 @@
 @import "base"
 
 .about
-    @media screen and (max-width: $tabletS)
-        padding: 50px 0
+    &__content
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: auto auto
+        grid-column-gap: 150px
+        @media screen and (max-width: $tabletM)
+            display: flex
+            flex-direction: column
+            align-items: center
 
-    & > .container
-        display: flex
-        justify-content: center
-
-    &__title
-        margin-bottom: 15px
-
-        & > h2
+        h2
+            margin-bottom: 40px
             text-align: left
-            @media screen and (max-width: $tabletS)
+            @media screen and (max-width: $tabletM)
+                margin-bottom: 20px
                 text-align: center
 
-        & > .title__line
-            width: 196px
-            @media screen and (max-width: $tabletS)
-                margin: 0 auto
-            @media screen and (max-width: $mobileL)
-                width: 150px
-
     &__image
-        max-width: 50%
-        height: auto
         display: grid
+        place-content: center
+        grid-row: 1/3
+        width: 588px
+        height: 623px
+        border-radius: 20px
+        overflow: hidden
+        @media screen and (max-width: $tabletM)
+            margin-bottom: 30px
         @media screen and (max-width: $tabletS)
-            display: none
-
-        & > img
             width: 100%
+            max-width: 450px
             height: auto
 
-    &__text
-        margin-top: 174px
-        @media screen and (max-width: $tabletM)
-            margin-top: 0
-
-        & > p
-            max-width: 490px
-            font-size: 16px
-            line-height: 26px
-            @media screen and (max-width: $tabletM)
-                font-size: 14px
-                line-height: 24px
+        & img
+            width: auto
+            height: 100%
             @media screen and (max-width: $tabletS)
-                font-size: 10px
-                line-height: 18px
-                max-width: 85vw
+                width: 100%
+                height: auto
+
+    &__text
+        &-top
+            grid-column: 2/3
+            grid-row: 1/2
+
+        &-bottom
+            grid-column: 2/3
+            grid-row: 2/3
+            @media screen and (max-width: $tabletM)
+                display: flex
+                flex-direction: column
+                align-items: center
+
+        & p
+            max-width: 580px
+            margin-bottom: 24px
+            @media screen and (max-width: $tabletM)
+                text-align: center
+
+        & .btn
+            padding: 24px 87px
+            @media screen and (max-width: $tabletS)
+                padding: 20px 90px

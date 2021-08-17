@@ -3,12 +3,17 @@
 .benefits
     margin-top: 0
     border-top: 0
-    background: $white-grey
 
     &__content
         display: flex
         justify-content: space-between
+        @media screen and (max-width: $tabletM)
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 1fr 1fr
+            gap: 40px
         @media screen and (max-width: $tabletS)
+            display: flex
             flex-direction: column
             align-items: center
             gap: 40px
