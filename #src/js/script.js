@@ -8,10 +8,10 @@ $(document).ready(function () {
     };
     var header = document.getElementById("header-top");
     var sticky = 10;
-    if (window.screen.width <= '768') {
-        header = document.getElementById("header");
-        sticky = 0
-    }
+    // if (window.screen.width <= '768') {
+    //     header = document.getElementById("header");
+    //     sticky = 0
+    // }
 
     function myFunction() {
         if (window.pageYOffset >= sticky) {

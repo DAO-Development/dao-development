@@ -9,104 +9,137 @@ $desktopM: 1600px
 $desktopL: 1920px
 
 /* Цвета */
-$black: rgba(0, 0, 0, 1)
+$white: rgba(255, 255, 255, 1)
+$white-grey: rgba(225, 231, 239, 1)
+$light-grey: rgba(206, 213, 222, 1)
+$grey: rgba(162, 177, 195, 1)
+$dark-grey: rgba(124, 142, 164, 1)
+$blue: rgba(81, 104, 132, 1)
+$dark-blue: rgba(25, 46, 71, 1)
+$black: rgba(5, 18, 34, 1)
+$header-gradient: linear-gradient(180deg, rgba(247, 247, 247, 0) 0%, rgba(255, 101, 101, 0.1) 22.16%, rgba(255, 101, 101, 0.1) 100%)
+
+
 $black-opacity: rgba(0, 0, 0, 0.6)
 $shadow: rgba(0, 0, 0, 0.25)
-$white: rgba(255, 255, 255, 1)
 $blue-grey: rgba(145, 156, 183, 1)
-$dark-grey: rgba(196, 196, 196, 1)
-$light-grey: rgba(245, 245, 245, 1)
 $brown: rgba(90, 66, 66, 1)
 $button-gradient: linear-gradient(92.13deg, #FF005B 3.94%, #FF7245 30%, #FFE53B 100%)
 $button-hover-gradient: linear-gradient(92.13deg, #FF005B 3.94%, #FF7245 81.03%, #FFE53B 100%)
-$header-gradient: linear-gradient(180deg, rgba(247, 247, 247, 0) 0%, rgba(255, 101, 101, 0.1) 22.16%, rgba(255, 101, 101, 0.1) 100%)
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap')
 
 @font-face
-    font-family: "President Normal"
-    src: url("../fonts/president-normal/president-normal.woff") format("woff"),
-    url("../fonts/president-normal/president-normal.woff2") format("woff2")
-    //url("../fonts/president-normal/president-normal.ttf") format("truetype"),
-    //url("../fonts/president-normal/president-normal.eot?#iefix") format("embedded-opentype"),
-    //url("../fonts/president-normal/president-normal.otf") format("opentype"),
-    //url("../fonts/president-normal/president-normal.svg") format("svg"),
+    font-family: "Georgia"
+    src: url("../fonts/georgia/Georgia.woff") format("woff"),
+    url("../fonts/georgia/Georgia.woff2") format("woff2")
     font-weight: normal
     font-style: normal
 
 body
-    font-family: Comfortaa, serif
     margin: 0
+    font-family: Roboto, sans-serif
+    font-weight: 300
+    font-size: 24px
+    line-height: 28px
     overflow-x: hidden
+    @media screen and (max-width: $tabletS)
+        font-size: 18px
+        line-height: 21px
 
 .container
-    width: 1200px
+    width: 1400px
     margin: 0 auto
+    @media screen and (max-width: $desktopS)
+        width: 1200px
     @media screen and (max-width: $tabletM)
         width: 90vw
     @media screen and (max-width: $mobileL)
+        padding: 30px
         width: 100vw
 
 div
     box-sizing: border-box
 
-h1, h2
-    font-family: 'President Normal', sans-serif
+h1, h2, h3
+    font-family: 'Georgia', serif
     font-weight: 400
     margin: 0
 
 h1
-    margin-bottom: 20px
-    font-size: 70px
-    line-height: 74px
+    margin-bottom: 40px
+    font-size: 60px
+    line-height: 110%
+    color: $white-grey
+    @media screen and (max-width: $tabletS)
+        margin-bottom: 20px
+        font-size: 48px
 
 h2
-    margin-bottom: 5px
-    font-size: 40px
-    line-height: 42px
+    margin-bottom: 80px
+    font-size: 48px
+    line-height: 55px
     text-align: center
-    @media screen and (max-width: $mobileL)
+    @media screen and (max-width: $tabletS)
+        margin-bottom: 40px
+        font-size: 30px
+        line-height: 34px
+
+h3
+    font-size: 36px
+    line-height: 41px
+    margin-bottom: 10px
+    @media screen and (max-width: $tabletS)
         font-size: 24px
-        line-height: 25px
+        line-height: 27px
 
-    & + .title__line
-        border-top: 2px solid $black-opacity
-
-h3, h4, h5, h6
-    font-family: Comfortaa, serif
+h4, h5, h6
+    font-family: Roboto, sans-serif
     font-weight: 700
     margin: 0
 
-h3
-    font-size: 24px
-    line-height: 27px
-    letter-spacing: 0.1em
-    margin-bottom: 8px
-    @media screen and (max-width: $mobileL)
-        font-size: 16px
-        line-height: 18px
-
 h4
-    font-size: 16px
-    line-height: 18px
+    margin-bottom: 40px
+    font-size: 30px
+    line-height: 35px
+    color: $white-grey
     @media screen and (max-width: $tabletS)
-        font-size: 14px
-        line-height: 16px
+        margin-bottom: 20px
+        font-size: 24px
+        line-height: 28px
+
+h5
+    margin-bottom: 10px
+    font-size: 18px
+    line-height: 21px
 
 section
     border-top: 94px solid transparent
     margin-top: -94px
+    padding: 100px 0 150px
 
 button, .btn
-    font-family: Comfortaa, serif
-    color: $white
+    font-family: Roboto, sans-serif
+    font-size: 24px
+    line-height: 28px
     border: none
-    border-radius: 40px
-    background-image: $button-gradient
-    background-size: 100% 100%
-    transition: background-size 0.4s
+    border-radius: 20px
+    transition: 0.3s ease-in-out
+    @media screen and (max-width: $tabletS)
+        font-size: 18px
+        line-height: 21px
 
     &:hover
         cursor: pointer
-        background-size: 300% 100%
+        background-color: $dark-grey
+
+.light-btn
+    background-color: $light-grey
+    color: $black
+
+.dark-btn
+    background-color: $blue
+    color: $white-grey
 
 p
     margin: 0
