@@ -3,81 +3,49 @@
 .benefits
     margin-top: 0
     border-top: 0
-    padding-top: 25px
-    padding-bottom: 47px
-    background: $light-grey
-    @media screen and (max-width: $tabletS)
-        padding: 150px 0 50px
-
-
-    &__title
-        margin-bottom: 69px
-        @media screen and (max-width: $mobileL)
-            margin-bottom: 20px
-
-        & .title__line
-            width: 336px
-            margin: 0 auto
-            @media screen and (max-width: $mobileL)
-                width: 180px
+    background: $white-grey
 
     &__content
-        display: grid
-        grid-template-columns: 1fr 1fr
-        row-gap: 50px
-        column-gap: 190px
-        @media screen and (max-width: $tabletM)
-            column-gap: 100px
+        display: flex
+        justify-content: space-between
         @media screen and (max-width: $tabletS)
-            grid-template-columns: 1fr
-            column-gap: 0
-            row-gap: 0
+            flex-direction: column
             align-items: center
+            gap: 40px
 
     &__single
         display: flex
-
-    &__line
-        display: none
-        @media screen and (max-width: $tabletS)
-            display: block
-            margin: -15px auto 30px
-            width: 182px
-            height: 1px
+        flex-direction: column
+        align-items: center
+        text-align: center
 
     &__number
-        width: 101px
-        height: 101px
-        margin-right: 16px
-        background-image: url("../img/triagle.svg")
+        display: flex
+        align-items: flex-end
+        margin-bottom: 20px
+        width: 135px
+        height: 102px
+        background-image: url("../img/number.png")
         background-size: contain
         background-repeat: no-repeat
         @media screen and (max-width: $mobileL)
-            width: 69px
-            height: 69px
-            font-size: 40px
-            line-height: 47px
+            width: 83px
+            height: 62px
 
         & > span
             display: block
             width: 100%
-            padding-top: 16px
-            font-family: Roboto, sans-serif
-            font-size: 50px
-            line-height: 59px
-            font-weight: 900
-            text-align: right
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            font-family: 'Georgia', serif
+            font-size: 64px
+            line-height: 75px
+            font-weight: 600
+            text-align: center
             @media screen and (max-width: $mobileL)
-                padding-top: 10px
-                font-size: 40px
-                line-height: 47px
+                font-size: 36px
+                line-height: 42px
 
     &__text
-        & > p
-            max-width: 212px
-            letter-spacing: 0.1em
+        & p
+            max-width: 320px
             @media screen and (max-width: $mobileL)
-                font-size: 12px
-                line-height: 13px
-                max-width: 188px
+                max-width: 200px
