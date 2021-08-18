@@ -20,8 +20,11 @@
 
     &__logo
         img
-            width: 80px
+            width: 100px
             height: auto
+            @media screen and (max-width: $tabletS)
+                width: 80px
+
 
     &-top
         position: absolute
@@ -99,7 +102,7 @@
                 padding: 70px 30px 40px
                 height: 400px
 
-    &__phone
+    &__phone a
         display: flex
         align-items: center
         font-weight: 500

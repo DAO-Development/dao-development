@@ -53,17 +53,17 @@ $(document).ready(function () {
             dots: true,
         });
     } else if ($(window).width() > '1024') {
-        $('.works__slider').slick({
-            variableWidth: true,
-            centerMode: true,
-            centerPadding: '80px',
-            dots: true,
-            arrows: true,
-            prevArrow: '<div class="arrow-prev arrow"></div>',
-            nextArrow: '<div class="arrow-next arrow"></div>',
-            slidesToShow: 3,
-            infinite: true
-        });
+            $('.works__slider').slick({
+                variableWidth: true,
+                centerMode: true,
+                centerPadding: '80px',
+                dots: true,
+                arrows: true,
+                prevArrow: '<div class="arrow-prev arrow"></div>',
+                nextArrow: '<div class="arrow-next arrow"></div>',
+                slidesToShow: 1,
+                infinite: true
+            });
     }
 
     if ($(window).width() <= '568') {
