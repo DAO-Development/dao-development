@@ -37,7 +37,7 @@ $(document).ready(function () {
         }
     })
 
-    $('.menu__link').on('click', function(){
+    $('.menu__link').on('click', function () {
         $('.header__mobile').removeClass('change')
         $('.header__menu').removeClass('width')
     })
@@ -47,20 +47,29 @@ $(document).ready(function () {
      */
     if ($(window).width() <= '768') {
         $('.works__slider').slick({
-            variableWidth: true,
+            variableWidth: false,
             slidesToShow: 1,
             arrows: false,
             dots: true,
-            centerMode: true,
-            centerPadding: '40px'
+            // centerMode: true,
+            // centerPadding: '40px'
         });
     } else if ($(window).width() > '768') {
         $('.works__slider').slick({
-            variableWidth: false,
+            variableWidth: true,
+            centerMode: true,
+            centerPadding: '80px',
             dots: true,
-            arrows: false,
-            infinite: false,
+            arrows: true,
+            prevArrow: '<div class="arrow-prev arrow"></div>',
+            nextArrow: '<div class="arrow-next arrow"></div>',
             slidesToShow: 3,
+            infinite: true
+            // variableWidth: false,
+            // dots: true,
+            // arrows: false,
+            // infinite: false,
+            // slidesToShow: 3,
         });
     }
 

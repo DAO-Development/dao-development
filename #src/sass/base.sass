@@ -152,3 +152,38 @@ a
     &:hover
         text-decoration: underline
         cursor: pointer
+
+.slick-dots
+    bottom: -80px
+
+    li
+        & > button
+            background-color: $dark-blue
+            opacity: 0.5
+
+            &:before
+                content: ""
+
+        &.slick-active
+            & > button
+                opacity: 1
+
+.arrow
+    position: absolute
+    top: 40%
+    width: 60px
+    height: 120px
+    background-size: cover
+    @media screen and (max-width: $desktopS)
+        &-prev
+            left: -90px
+        &-next
+            right: -90px
+
+    &-prev
+        left: -130px
+        background-image: url("../img/arrow-prev.png")
+
+    &-next
+        right: -130px
+        background-image: url("../img/arrow-next.png")
