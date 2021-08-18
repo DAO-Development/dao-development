@@ -1,91 +1,100 @@
 @import "base"
 .footer
-    padding: 42px 0
-    background-color: $blue-grey
-    color: $white
+    padding: 80px 0
+    background-color: $dark-blue
+    color: $white-grey
+    @media screen and (max-width: $tabletS)
+        padding: 60px 0 128px
 
     ul
         list-style: none
-        padding-inline-start: 0
+        padding-left: 0
 
-        & > li
-            & > a
-                color: $white
+        li
+            a
+                color: $white-grey
 
-                &:hover
-                    text-decoration: underline
-
-    h4
-        margin-bottom: 8px
-        @media screen and (max-width: $mobileL)
-            text-align: center
-
-    .title__line
-        width: 120px
-        margin-bottom: 13px
-        border-top: 2px solid $white
-        @media screen and (max-width: $mobileL)
-            margin: 0 auto 6px
-
-    & > .container
+    &__content
+        position: relative
         display: flex
         justify-content: space-between
-        @media screen and (max-width: $mobileL)
+        @media screen and (max-width: $tabletS)
             flex-direction: column
             align-items: center
 
-    &__menus
-        display: flex
-        @media screen and (max-width: $mobileL)
-            margin-bottom: 20px
+    &__logo
+        width: 150px
+        height: 150px
+        @media screen and (max-width: $tabletM)
+            display: none
+
+        img
+            width: 100%
+            height: auto
 
     &__menu
-        &:first-child
-            margin-right: 92px
-            @media screen and (max-width: $mobileL)
-                margin-right: 40px
-
-            & h4
-                font-size: 20px
-                line-height: 22px
-                @media screen and (max-width: $tabletS)
-                    font-size: 16px
-                    line-height: 18px
-
         & ul
             display: flex
             flex-direction: column
-            gap: 14px
-            margin: 0
-            @media screen and (max-width: $mobileL)
+            gap: 20px
+            @media screen and (max-width: $tabletS)
                 align-items: center
-                gap: 5px
-
-            & > li
-                & > a
-                    font-size: 16px
-                    line-height: 18px
-                    @media screen and (max-width: $mobileL)
-                        font-size: 12px
-                        line-height: 13px
+                gap: 10px
 
 
     &__contacts
-        & ul
+        ul
             display: flex
             flex-direction: column
             gap: 10px
-            @media screen and (max-width: $mobileL)
+            @media screen and (max-width: $tabletS)
                 align-items: center
 
-            & li
-                font-size: 20px
-                line-height: 22px
-                @media screen and (max-width: $mobileL)
-                    font-size: 16px
-                    line-height: 18px
+            li
+                a
+                    font-size: 30px
+                    line-height: 36px
+                    @media screen and (max-width: $tabletS)
+                        font-size: 18px
+                        line-height: 21px
 
-        & .btn
-            font-size: 14px
-            line-height: 16px
-            padding: 10px 15px
+        .btn
+            padding: 14px 72px
+            @media screen and (max-width: $tabletS)
+                padding: 18px 80px
+
+        .footer__social
+            display: flex
+            flex-direction: row
+            gap: 30px
+            @media screen and (max-width: $tabletS)
+                gap: 20px
+
+            li
+                a
+                    svg
+                        width: 40px
+                        height: 40px
+                        @media screen and (max-width: $tabletS)
+                            width: 24px
+                            height: 24px
+
+    &__copyright
+        position: absolute
+        left: 0
+        bottom: 0
+        font-size: 24px
+        line-height: 28px
+        @media screen and (max-width: $tabletS)
+            bottom: -78px
+            width: 100%
+
+        &-desktop
+            @media screen and (max-width: $tabletS)
+                display: none
+
+        &-mobile
+            display: none
+            @media screen and (max-width: $tabletS)
+                display: block
+                text-align: center
