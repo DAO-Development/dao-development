@@ -1,24 +1,10 @@
 @import "base"
 
 .reviews
-    padding: 50px 0
-
-    &__title
-        margin-bottom: 40px
-        @media screen and (max-width: $tabletS)
-            margin-bottom: 20px
-
-        & .title__line
-            width: 140px
-            margin: 0 auto
-
     &__slider
-        //display: flex
-        //justify-content: space-between
-        margin-bottom: 50px !important
+        margin-bottom: 130px !important
         @media screen and (max-width: $tabletS)
-            display: block
-            margin-bottom: 30px
+            margin-bottom: 100px !important
 
         & .slide
             display: flex
@@ -30,63 +16,22 @@
                 @media screen and (max-width: $tabletS)
                     margin-bottom: 8px
 
-            & .title__line
-                width: 72px
-                border-top: 2px solid $black-opacity
-                margin-bottom: 10px
-                @media screen and (max-width: $mobileL)
-                    border-top: 1px dashed $black-opacity
-
             &__image
-                width: 117px
-                height: 117px
+                width: 100px
+                height: 100px
                 overflow: hidden
-                //transform: rotate(45deg)
-                margin-bottom: 15px
-                @media screen and (max-width: $mobileL)
-                    width: 64px
-                    height: 64px
+                margin-bottom: 20px
+                border-radius: 50%
 
                 & img
-                    width: 117px
+                    width: 100%
                     height: auto
-                    transform: rotate(-45deg)
-                    @media screen and (max-width: $mobileL)
-                        width: 64px
 
             & p
                 max-width: 326px
                 text-align: center
                 font-size: 14px
                 line-height: 16px
-                @media screen and (max-width: $mobileL)
-                    font-size: 10px
-                    line-height: 11px
-
-        .arrow
-            z-index: 400
-            width: 40px
-            height: 40px
-            border-radius: 50%
-            display: flex
-            align-items: center
-            justify-content: center
-            cursor: pointer
-            position: absolute
-            top: 46%
-            background: $white
-            box-shadow: 0 0 8px rgba(214, 214, 214, 0.32)
-
-            img
-                display: block
-
-        .arrow-prev
-            position: absolute
-            left: 0
-
-        .arrow-next
-            position: absolute
-            right: 0
 
     &__link
         text-align: center
@@ -100,7 +45,3 @@
             &:hover
                 text-decoration: none
                 border-bottom: none
-
-            @media screen and (max-width: $mobileL)
-                font-size: 12px
-                line-height: 14px
