@@ -45,16 +45,14 @@ $(document).ready(function () {
     /**
      * Определение слайдеров
      */
-    if ($(window).width() <= '768') {
+    if ($(window).width() <= '1024') {
         $('.works__slider').slick({
             variableWidth: false,
             slidesToShow: 1,
             arrows: false,
             dots: true,
-            // centerMode: true,
-            // centerPadding: '40px'
         });
-    } else if ($(window).width() > '768') {
+    } else if ($(window).width() > '1024') {
         $('.works__slider').slick({
             variableWidth: true,
             centerMode: true,
@@ -65,11 +63,6 @@ $(document).ready(function () {
             nextArrow: '<div class="arrow-next arrow"></div>',
             slidesToShow: 3,
             infinite: true
-            // variableWidth: false,
-            // dots: true,
-            // arrows: false,
-            // infinite: false,
-            // slidesToShow: 3,
         });
     }
 
@@ -81,17 +74,17 @@ $(document).ready(function () {
             infinite: false,
             slidesToShow: 1,
         });
-    } else if ($(window).width() <= '768') {
+    } else if ($(window).width() <= '1024') {
         $('.reviews__slider').slick({
             variableWidth: false,
             dots: true,
-            arrows: true,
+            arrows: false,
             prevArrow: '<div class="arrow-prev arrow"></div>',
             nextArrow: '<div class="arrow-next arrow"></div>',
             infinite: false,
             slidesToShow: 2,
         });
-    }else if ($(window).width() > '768') {
+    } else if ($(window).width() > '1024') {
         $('.reviews__slider').slick({
             variableWidth: false,
             dots: true,

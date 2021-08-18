@@ -42,6 +42,7 @@ body
     font-weight: 300
     font-size: 24px
     line-height: 28px
+    color: $black
     overflow-x: hidden
     @media screen and (max-width: $tabletS)
         font-size: 18px
@@ -89,17 +90,19 @@ h3
     font-size: 36px
     line-height: 41px
     margin-bottom: 10px
+    text-align: center
     @media screen and (max-width: $tabletS)
         font-size: 24px
         line-height: 27px
 
 h4, h5, h6
     font-family: Roboto, sans-serif
-    font-weight: 700
+    font-weight: 400
     margin: 0
 
 h4
     margin-bottom: 40px
+    font-weight: 500
     font-size: 30px
     line-height: 35px
     color: $white-grey
@@ -118,11 +121,14 @@ section
     //margin-top: -94px
     padding: 100px 0
     background: $white-grey
+    @media screen and (max-width: $tabletS)
+        padding: 50px 0
 
 button, .btn
     font-family: Roboto, sans-serif
     font-size: 24px
     line-height: 28px
+    text-transform: lowercase
     border: none
     border-radius: 20px
     transition: 0.3s ease-in-out

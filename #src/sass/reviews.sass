@@ -38,10 +38,10 @@
 
         & a
             text-align: center
-            padding-bottom: 5px
-            border-bottom: 1px solid $black
+            text-decoration: underline
             transition: 0.3s ease
+            @media screen and (max-width: $mobileL)
+                max-width: 191px
 
             &:hover
                 text-decoration: none
-                border-bottom: none

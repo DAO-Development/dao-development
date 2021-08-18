@@ -13,11 +13,11 @@
         //        max-width: 95vw
 
         .slick-list
-            padding-top: 65px !important
-            padding-bottom: 65px !important
-            @media screen and (max-width: $mobileL)
-                padding-top: 0 !important
-                padding-bottom: 0 !important
+        padding-top: 65px !important
+        padding-bottom: 65px !important
+        @media screen and (max-width: $tabletM)
+            padding-top: 0 !important
+            padding-bottom: 0 !important
 
         & .slide
             position: relative
@@ -27,12 +27,18 @@
 
             a
                 display: block
+                width: fit-content
 
             &__image
                 width: 576px
                 height: 537px
                 border-radius: 20px
                 overflow: hidden
+                @media screen and (max-width: $tabletM)
+                    width: 85vw
+                    height: auto
+                    max-height: 60vw
+
 
                 img
                     width: 100%
@@ -42,65 +48,65 @@
                 z-index: 150
                 opacity: 1
                 transform: scale(1.25)
-                @media screen and (max-width: $mobileL)
+                @media screen and (max-width: $tabletM)
                     transform: none
-    //    overflow: hidden
-    //    width: auto
-    //    height: 537px
-    //    transition: 0.3s ease
-    //    @media screen and (max-width: $tabletS)
-    //        width: 83vw
+//    overflow: hidden
+//    width: auto
+//    height: 537px
+//    transition: 0.3s ease
+//    @media screen and (max-width: $tabletS)
+//        width: 83vw
+//        height: auto
+//        max-height: 60vw
+    //
+    //
+    //    &__image
+    //        width: 100%
+    //        height: 100%
+    //
+    //    & picture
+    //        width: 100%
+    //
+    //    & img
+    //        width: 100%
     //        height: auto
-    //        max-height: 60vw
-        //
-        //
-        //    &__image
-        //        width: 100%
-        //        height: 100%
-        //
-        //    & picture
-        //        width: 100%
-        //
-        //    & img
-        //        width: 100%
-        //        height: auto
-        //
-        //
-        //    &__description
-        //        display: none
-        //        @media screen and (max-width: $tabletS)
-        //            flex-direction: column
-        //            align-items: center
-        //            width: 70vw
-        //            opacity: 0
-        //            transition: 0.2s ease
-        //
-        //        & h2
-        //            font-size: 20px
-        //            line-height: 22px
-        //
-        //        & p
-        //            font-size: 12px
-        //            line-height: 18px
-        //            text-align: center
-        //            @media screen and (max-width: $mobileL)
-        //                text-align: left
+    //
+    //
+    //    &__description
+    //        display: none
+    //        @media screen and (max-width: $tabletS)
+    //            flex-direction: column
+    //            align-items: center
+    //            width: 70vw
+    //            opacity: 0
+    //            transition: 0.2s ease
+    //
+    //        & h2
+    //            font-size: 20px
+    //            line-height: 22px
+    //
+    //        & p
+    //            font-size: 12px
+    //            line-height: 18px
+    //            text-align: center
+    //            @media screen and (max-width: $mobileL)
+    //                text-align: left
 
-        //& .slide__image
-        //    @media screen and (max-width: $tabletS)
-        //        width: 300px
-        //        height: 208px
-        //        transform: scale(1)
-        //    @media screen and (max-width: $mobileL)
-        //        width: 208px
-        //        height: 144px
-        //
-        //& .slide__description
-        //    @media screen and (max-width: $tabletS)
-        //        display: flex
-        //        opacity: 1
+    //& .slide__image
+    //    @media screen and (max-width: $tabletS)
+    //        width: 300px
+    //        height: 208px
+    //        transform: scale(1)
+    //    @media screen and (max-width: $mobileL)
+    //        width: 208px
+    //        height: 144px
+    //
+    //& .slide__description
+    //    @media screen and (max-width: $tabletS)
+    //        display: flex
+    //        opacity: 1
 
-        //& .slick-dots
-        //    bottom: 0
-        //    @media screen and (max-width: $tabletS)
-        //        bottom: -30px
+    //& .slick-dots
+    //    bottom: 0
+    //    @media screen and (max-width: $tabletS)
+    //        bottom: -30px
